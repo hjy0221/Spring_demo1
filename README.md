@@ -29,11 +29,4 @@ Spring Boot 기반으로 만든 간단한 상품 등록 및 조회 API 예제입
 
 ---
 
-## 📂 실행 방법
 
-### 1. 프로젝트 실행
-
-```bash
-./gradlew bootRun
-# 또는
-mvn spring-boot:run
