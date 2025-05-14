@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 서비스</title>
+    <style>
+        body { font-family: sans-serif; margin: 2rem; }
+        h2 { margin-top: 2rem; }
+        label, input, textarea { display: block; margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+<h1>상품 서비스 예제</h1>
+
+<!-- 상품 등록 -->
+<h2>상품 등록</h2>
+<label>이름: <input type="text" id="name" /></label>
+<label>가격: <input type="number" id="price" /></label>
+<label>설명: <textarea id="description"></textarea></label>
+<button onclick="saveProduct()">등록</button>
+
+<!-- 상품 조회 -->
+<h2>상품 상세 조회</h2>
+<label>상품 ID: <input type="number" id="productId" /></label>
+<button onclick="getProduct()">조회</button>
+
+<div id="productResult" style="margin-top:1rem;"></div>
+
+<script>
+    // 상품 등록
+    function saveProduct() {
+        const product = {
+            name: document.getElementById('name').value,
+            price: parseInt(document.getElementById('price').value),
+            description: document.getElementById('description').value
+        };
+
+        fetch('/products', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(product)
+        }).then(response => {
+            if (response.ok) {
+                alert('상품이 등록되었습니다.');
+                // 입력값 초기화
+                document.getElementById('name').value = '';
+                document.getElementById('price').value = '';
+                document.getElementById('description').value = '';
+            } else {
+                alert('등록 실패');
+            }
+        });
+    }
+
+    // 상품 조회
+    function getProduct() {
+        const id = document.getElementById('productId').value;
+
+        fetch(`/products/${id}`)
+            .then(response => {
+                if (!response.ok) throw new Error();
+                return response.json();
+            })
+            .then(product => {
+                document.getElementById('productResult').innerHTML = `
+                    <strong>이름:</strong> ${product.name}<br>
+                    <strong>가격:</strong> ${product.price}<br>
+                    <strong>설명:</strong> ${product.description}
+                `;
+            })
+            .catch(() => {
+                document.getElementById('productResult').innerHTML = '상품을 찾을 수 없습니다.';
+            });
+    }
+</script>
+</body>
+</html>
