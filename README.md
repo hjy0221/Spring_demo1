@@ -1,27 +1,27 @@
 # 상품 서비스 예제 · Product Service Demo
 
-[한국어](#한국어) · [English](#english)
+[日本語](#日本語) · [English](#english) · [한국어](#한국어)
 
-## 한국어
+## 日本語
 
-Spring Boot로 만든 간단한 상품 등록·조회 API 예제입니다. 정적 HTML 화면에서 브라우저로 기능을 확인할 수 있습니다.
+Spring Boot による商品の登録・取得 API のサンプルです。静的 HTML 画面からブラウザーで動作を確認できます。
 
-### 구조
+### 構成
 
-| 계층 | 파일 | 역할 |
+| 層 | ファイル | 役割 |
 | --- | --- | --- |
-| Domain | `Product.java` | 상품 도메인 모델 |
-| Repository | `ProductRepository.java` | 메모리 기반 상품 저장소 |
-| Service | `ProductService.java` | 비즈니스 로직 |
+| Domain | `Product.java` | 商品モデル |
+| Repository | `ProductRepository.java` | メモリ内の商品保存 |
+| Service | `ProductService.java` | ビジネスロジック |
 | Controller | `ProductController.java` | HTTP API |
-| View | `index.html` | 상품 등록·조회 UI |
+| View | `index.html` | 商品登録・取得画面 |
 
-### 구현 기능
+### 機能
 
-- `POST /products`: 상품 등록
-- `GET /products/{id}`: 상품 상세 조회
+- `POST /products`: 商品を登録
+- `GET /products/{id}`: ID で商品を取得
 
-### 실행하기
+### 実行方法
 
 ```bash
 cd demo
@@ -48,6 +48,32 @@ A small Spring Boot example for creating and retrieving products. A static HTML 
 - `GET /products/{id}`: retrieve a product by ID
 
 ### Run locally
+
+```bash
+cd demo
+./gradlew bootRun
+```
+
+## 한국어
+
+Spring Boot로 만든 간단한 상품 등록·조회 API 예제입니다. 정적 HTML 화면에서 브라우저로 기능을 확인할 수 있습니다.
+
+### 구조
+
+| 계층 | 파일 | 역할 |
+| --- | --- | --- |
+| Domain | `Product.java` | 상품 도메인 모델 |
+| Repository | `ProductRepository.java` | 메모리 기반 상품 저장소 |
+| Service | `ProductService.java` | 비즈니스 로직 |
+| Controller | `ProductController.java` | HTTP API |
+| View | `index.html` | 상품 등록·조회 UI |
+
+### 구현 기능
+
+- `POST /products`: 상품 등록
+- `GET /products/{id}`: 상품 상세 조회
+
+### 실행하기
 
 ```bash
 cd demo
