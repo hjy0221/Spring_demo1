@@ -4,24 +4,24 @@
 
 ## 日本語
 
-Spring Boot による商品の登録・取得 API のサンプルです。静的 HTML 画面からブラウザーで動作を確認できます。
+Spring Bootで作った簡単な商品登録・照会APIの例です。静的HTML画面からブラウザで機能を確認できます。
 
-### 構成
+### 構造
 
-| 層 | ファイル | 役割 |
+|階層ファイル|役割|
 | --- | --- | --- |
-| Domain | `Product.java` | 商品モデル |
-| Repository | `ProductRepository.java` | メモリ内の商品保存 |
-| Service | `ProductService.java` | ビジネスロジック |
+|ドメイン| `Product.java` |商品ドメインモデル|
+|リポジトリ| `ProductRepository.java` |メモリベースの商品ストア
+|サービス| `ProductService.java` |ビジネスロジック
 | Controller | `ProductController.java` | HTTP API |
-| View | `index.html` | 商品登録・取得画面 |
+| View | `index.html` |商品登録・照会UI |
 
-### 機能
+### 実装機能
 
-- `POST /products`: 商品を登録
-- `GET /products/{id}`: ID で商品を取得
+- `POST /products`：商品登録
+- `GET /products/{id}`: 商品詳細照会
 
-### 実行方法
+### を実行する
 
 ```bash
 cd demo
@@ -30,24 +30,24 @@ cd demo
 
 ## English
 
-A small Spring Boot example for creating and retrieving products. A static HTML page is included so the API flow can be tested in a browser.
+This is a simple product registration/inquiry API example created with Spring Boot. You can check the functionality in your browser on a static HTML screen.
 
-### Architecture
+### Structure
 
-| Layer | File | Responsibility |
+| tier | file | Role |
 | --- | --- | --- |
 | Domain | `Product.java` | Product domain model |
-| Repository | `ProductRepository.java` | In-memory product storage |
-| Service | `ProductService.java` | Business logic |
+| Repository | `ProductRepository.java` | Memory-based product storage |
+| Service | `ProductService.java` | business logic |
 | Controller | `ProductController.java` | HTTP API |
-| View | `index.html` | Product creation and lookup UI |
+| View | `index.html` | Product registration/inquiry UI |
 
-### Features
+### Implementation features
 
-- `POST /products`: create a product
-- `GET /products/{id}`: retrieve a product by ID
+- `POST /products`: Product registration
+- `GET /products/{id}`: Product details inquiry
 
-### Run locally
+### Run
 
 ```bash
 cd demo
