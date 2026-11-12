@@ -4,6 +4,8 @@
 
 ## 日本語
 
+[日本語](https://github.com/hjy0221/Spring_demo1#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/Spring_demo1#english) · [한국어](https://github.com/hjy0221/Spring_demo1#%ED%95%9C%EA%B5%AD%EC%96%B4)
+
 Spring Bootで作った簡単な商品登録・照会APIの例です。静的HTML画面からブラウザで機能を確認できます。
 
 ### 構造
@@ -30,6 +32,8 @@ cd demo
 
 ## English
 
+[日本語](https://github.com/hjy0221/Spring_demo1#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/Spring_demo1#english) · [한국어](https://github.com/hjy0221/Spring_demo1#%ED%95%9C%EA%B5%AD%EC%96%B4)
+
 This is a simple product registration/inquiry API example created with Spring Boot. You can check the functionality in your browser on a static HTML screen.
 
 ### Structure
@@ -55,6 +59,8 @@ cd demo
 ```
 
 ## 한국어
+
+[日本語](https://github.com/hjy0221/Spring_demo1#%E6%97%A5%E6%9C%AC%E8%AA%9E) · [English](https://github.com/hjy0221/Spring_demo1#english) · [한국어](https://github.com/hjy0221/Spring_demo1#%ED%95%9C%EA%B5%AD%EC%96%B4)
 
 Spring Boot로 만든 간단한 상품 등록·조회 API 예제입니다. 정적 HTML 화면에서 브라우저로 기능을 확인할 수 있습니다.
 
